@@ -1,40 +1,75 @@
+.loginpage-section {
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .login-container {
-    position: relative;
-    top: 200px;
-    max-width: 400px;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    background-color: #f5f5f5;
-  }
+  position: relative;
+  max-width: 400px;
+  padding: 40px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  backdrop-filter: blur(4px);
+  background-color: #0040ff10;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  font-weight: 600;
+  font-size: 35px;
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+.login-container input {
+  width: 90%; /* Set to 100% to match the container's width */
+  margin: 10px 0; /* Adjust margin to keep it consistent */
+  padding: 13px;
+  border: 2px solid #018d6f;
+  border-radius: 9px;
+}
+
+.login-container button {
+  padding: 10px;
+  position: relative;
+  top: 8px;
+  background-color: #02917296; /* Teal */
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  font-size: 25px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+}
+.login-container button:hover{
+  color: rgb(0, 229, 255);
+  background-color: #91020296;
+}
+.login-container p {
+  text-align: center;
+  font-weight: 500;
+  color: white;
+  position: relative;
+  top: 10px;
+}
+.login-container  a{
+  color: rgb(0, 255, 174);
+  text-decoration: none;
+}
+.login-container  a:hover{
+  color: rgb(225, 255, 0);
+  text-decoration: underline;
   
-  .login-container h2 {
-    text-align: center;
-  }
-  
-  .login-container form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .login-container input {
-    margin: 10px 0;
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .login-container button {
-    padding: 10px;
-    background-color: #008080; /* Teal */
-    color: white;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-  }
-  
-  .login-container p {
-    text-align: center;
-  }
-  
+}

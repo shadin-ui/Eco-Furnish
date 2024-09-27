@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Navbar.css';
 import Logo from '../Images/Logos.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCartPlus, faUserCircle } from '@fortawesome/free-solid-svg-icons';
+import { faCartPlus, faUserCircle, faSearch } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';
 import { useEffect } from 'react';
 
@@ -58,8 +58,10 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
         <li><Link to="/products">Products</Link></li>
       </ul>
       <div className="search-bar">
+        <FontAwesomeIcon icon={faSearch} className="search-icon" />
         <input type="text" placeholder="Search products..." />
       </div>
+
       <ul className="auth-links">
         {isLoggedIn && (
           <li>

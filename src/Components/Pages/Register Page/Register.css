@@ -1,0 +1,87 @@
+.registerpage-section {
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.register-container {
+  backdrop-filter: blur(4px);
+  height: 64vh;
+  position: relative;
+  max-width: 400px;
+  padding: 40px; /* Match padding from login */
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  background-color: #ff00190a; /* Match background color from login */
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.register-container h2 {
+  text-align: center;
+  position: relative;
+  bottom: 35px;
+  color: rgb(255, 255, 255); /* Match text color from login */
+  font-weight: 600;
+  font-size: 35px; /* Match font size from login */
+}
+
+.register-container form {
+  position: relative;
+  bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  color: white; /* Match text color */
+}
+
+.register-container input {
+  width: 90%; /* Set to 90% to match the container's width */
+  margin: 10px 0; /* Adjust margin to keep it consistent */
+  padding: 13px; /* Match padding from login */
+  border: 2px solid #018d6f; /* Match border color */
+  border-radius: 9px; /* Match border radius */
+}
+
+.register-container button {
+  padding: 10px;
+  position: relative;
+  top: 8px; /* Match position */
+  background-color: #02917296; /* Match button color */
+  color: rgb(255, 255, 255);
+  border: none;
+  border-radius: 50px; /* Match border radius */
+  cursor: pointer;
+  font-size: 25px; /* Match font size */
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+}
+
+.register-container button:hover {
+  color: rgb(0, 229, 255);
+  background-color: #91020296; /* Match hover color */
+}
+
+.register-container p {
+  text-align: center;
+  font-weight: 500;
+  color: white;
+  position: relative;
+  bottom: 35px;
+}
+
+.register-container a {
+  color: rgb(0, 255, 174);
+  text-decoration: none;
+}
+
+.register-container a:hover {
+  color: rgb(225, 255, 0);
+  text-decoration: underline;
+}

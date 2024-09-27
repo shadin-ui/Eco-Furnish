@@ -8,8 +8,6 @@
   align-items: center;
 }
 .best-selling-section {
-  /* padding: 50px 20px; */
-  /* background-color: #f8f9fa; */
   text-align: center;
 }
 
@@ -65,7 +63,7 @@
 
 .add-to-cart-button {
   padding: 10px 20px;
-  background-color: #28a745;
+  background-color: #00d5ff;
   color: white;
   border: none;
   border-radius: 5px;

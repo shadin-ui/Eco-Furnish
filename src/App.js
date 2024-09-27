@@ -4,7 +4,7 @@ import Navbar from './Components/Nav/Navbar';
 import HomePage from './Components/Home/Homes';
 import './App.css';
 import Login from './Components/Pages/Login Page/Login';
-import Register from './Components/Pages/Registerr Page/Register';
+import Register from './Components/Pages/Register Page/Register';
 import Cart from './Components/Pages/Cart Page/Cart';
 
 function App() {

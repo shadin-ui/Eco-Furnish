@@ -14,8 +14,8 @@
 }
 
 .navbar.hidden {
-    transform: translateY(-100%); /* Moves the navbar out of view */
-    opacity: 0; /* Fades out the navbar */
+    transform: translateY(-100%);
+    opacity: 10; 
 }
 
   

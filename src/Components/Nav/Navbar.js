@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
-import Logo from '../Images/Logo.png';
+import Logo from '../Images/Logos.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartPlus, faUserCircle } from '@fortawesome/free-solid-svg-icons';
 import { useState } from 'react';

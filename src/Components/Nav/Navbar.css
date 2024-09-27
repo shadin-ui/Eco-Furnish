@@ -1,33 +1,38 @@
 
-
-.navbar {
+  .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: rgba(0, 39, 44, 0.871);
+    background-color: rgba(0, 20, 29, 0.777);
     backdrop-filter: blur(5px);
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
-    transition: background-color 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out;
-  }
+    transition: background-color 0.3s ease-in-out, backdrop-filter 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.navbar.hidden {
+    transform: translateY(-100%); /* Moves the navbar out of view */
+    opacity: 0; /* Fades out the navbar */
+}
+
   
   .navbar:hover {
-    background-color: rgba(0, 28, 28, 0.782);
-    backdrop-filter: blur(4px);
+    background-color: rgba(0, 19, 15, 0.821);
+    backdrop-filter: blur(2px);
   }
   
   .logo {
     display: flex;
     justify-content: center;
     position: relative;
-    top: 5px;
+    top: 1px;
   }
   
   .logo-image {
-    height: 50px;
+    height: 35px;
     cursor: pointer;
   }
   
@@ -53,14 +58,15 @@
     content: '';
     position: absolute;
     width: 0;
-    height: 2px;
-    background-color: rgb(255, 0, 0);
+    height: 3px;
+    background-color: rgb(248, 75, 75);
     left: 0;
     bottom: 0;
-    transition: width 0.3s ease-in-out;
+    transition: width 0.4s ease-in-out;
   }
   .nav-links li a:hover {
-    color: rgb(255, 0, 0);
+    color: rgb(91, 214, 255);
+    font-size: 18px;
   }
   
   .nav-links li a:hover::after {
@@ -97,6 +103,6 @@
   }
   
   .auth-links li a:hover {
-    color: #ff0000;
+    color: rgb(91, 214, 255);
   }
   

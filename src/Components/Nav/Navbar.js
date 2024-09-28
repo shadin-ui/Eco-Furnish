@@ -4,29 +4,26 @@ import './Navbar.css';
 import Logo from '../Images/Logos.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartPlus, faUserCircle, faSearch } from '@fortawesome/free-solid-svg-icons';
-import { useState } from 'react';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
-
   const handleLogout = () => {
     setIsLoggedIn(false);
     alert('Logged out successfully');
   };
+
   const [hidden, setHidden] = useState(false);
   const [lastScrollTop, setLastScrollTop] = useState(0);
+  const [searchActive, setSearchActive] = useState(false); // New state for search bar
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
 
-      // Check if the page is scrolled down by at least 100vh
       if (scrollTop > window.innerHeight) {
         if (scrollTop > lastScrollTop) {
-          // Scrolling down
           setHidden(true); // Hide the navbar
         } else {
-          // Scrolling up
           setHidden(false); // Show the navbar
         }
       } else {
@@ -38,12 +35,10 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
 
     window.addEventListener('scroll', handleScroll);
 
-    // Cleanup event listener on unmount
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, [lastScrollTop]); // Dependencies include lastScrollTop
-
+  }, [lastScrollTop]);
 
   return (
     <nav className={`navbar ${hidden ? 'hidden' : ''}`}>
@@ -54,14 +49,20 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
       </div>
       <ul className="nav-links">
         <li><Link to="/">Home</Link></li>
-        <li><Link to="/about">About Us</Link></li>
+        <li><Link to="/about">About us</Link></li>
         <li><Link to="/products">Products</Link></li>
       </ul>
-      <div className="search-bar">
-        <FontAwesomeIcon icon={faSearch} className="search-icon" />
-        <input type="text" placeholder="Search products..." />
+      <div className={`search-bar ${searchActive ? 'active' : ''}`}>
+        <FontAwesomeIcon 
+          icon={faSearch} 
+          className="search-icon" 
+          onClick={() => setSearchActive(!searchActive)} // Toggle search bar visibility
+        />
+        <input 
+          type="text" 
+          placeholder="Search products..." 
+        />
       </div>
-
       <ul className="auth-links">
         {isLoggedIn && (
           <li>

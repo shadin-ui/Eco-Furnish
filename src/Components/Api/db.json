@@ -343,6 +343,12 @@
       "name": "Shadin",
       "email": "shadin@gmail.com",
       "password": "sanu"
+    },
+    {
+      "id": "7f68",
+      "name": "Shammas",
+      "email": "shammas@gmail.com",
+      "password": "shammu"
     }
   ]
 }

@@ -6,6 +6,8 @@ import './App.css';
 import Login from './Components/Pages/Login Page/Login';
 import Register from './Components/Pages/Register Page/Register';
 import Cart from './Components/Pages/Cart Page/Cart';
+import About from './Components/Aboutus/About';
+import ScrollToTop from './Components/Aboutus/ScrollonTop';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -18,9 +20,10 @@ function App() {
   return (
     <Router>
       <Navbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
+      <ScrollToTop /> 
       <Routes>
         <Route path="/" element={<HomePage addToCart={addToCart} />} />
-        <Route path="/about" element={<h2>About Us Page</h2>} />
+        <Route path="/about" element={<About />} />
         <Route path="/products" element={<h2>Products Page</h2>} />
         <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
         <Route path="/signup" element={<Register />} />

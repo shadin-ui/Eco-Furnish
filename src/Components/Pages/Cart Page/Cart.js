@@ -1,13 +1,23 @@
-// Components/Cart/Cart.js
 import React from 'react';
-import './Cart.css'; // Optional: Add your own styles
+import './Cart.css';
 
-const Cart = () => {
+const Cart = ({ cartItems }) => {
   return (
     <div className="cart-container">
       <h2>Your Cart</h2>
-      <p>No items in your cart yet!</p>
-      {/* Add your cart items and functionality here */}
+      {cartItems.length === 0 ? (
+        <p>No items in your cart yet!</p>
+      ) : (
+        cartItems.map((item) => (
+          <div key={item.id} className="cart-item">
+            <img src={item.image} alt={item.name} className="cart-item-image" />
+            <div>
+              <h3>{item.name}</h3>
+              <p>₹{item.price}</p>
+            </div>
+          </div>
+        ))
+      )}
     </div>
   );
 };

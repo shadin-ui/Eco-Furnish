@@ -33,6 +33,7 @@
 }
 
 .login-container input {
+  background: transparent;
   width: 90%; /* Set to 100% to match the container's width */
   margin: 10px 0; /* Adjust margin to keep it consistent */
   padding: 13px;

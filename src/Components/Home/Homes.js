@@ -1,22 +1,16 @@
-import React from "react";
+import React, { useState, useEffect } from 'react';
+import productsData from '../Api/db.json'
 import './Homes.css';
-import Background from '../Images/Background.png'
-import axios from "axios";
-import { useState } from "react";
-import { useEffect } from "react";
+import Background from '../Images/Background.png';
 
-function HomePage() {
+function HomePage({ addToCart }) {
   const [bestSellingProducts, setBestSellingProducts] = useState([]);
+
   useEffect(() => {
-    axios
-      .get("http://localhost:5000/products")
-      .then((response) => {
-        const Products = response.data;
-        const bestSellers = Products.filter((Product) => Product.price >= 10);
-        setBestSellingProducts(bestSellers);
-      })
-      .catch((error) => console.error("Error fetching product data:", error));
+    const bestSellers = productsData.products.filter((Product) => Product.price >= 10);
+    setBestSellingProducts(bestSellers);
   }, []);
+
   return (
     <>
       <div>
@@ -27,27 +21,21 @@ function HomePage() {
         <div className="product-grid">
           {bestSellingProducts.map((Product) => (
             <div key={Product.id} className="product-card">
-
-              <img
-                src={Product.image}
-                alt={Product.name}
-                className="product-imag"
-              />
+              <img src={Product.image} alt={Product.name} className="product-imag" />
               <h3 className="product-name">{Product.name}</h3>
               <p className="product-price">₹{Product.price}</p>
               <p className="product-rating">Rating: {Product.stars} ★</p>
               <div>
-                <button className="add-to-cart-button">Add to Cart</button>
-                {/* <button onClick={handleNavCart} className="navCart-button">
-                  View Cart
-                </button> */}
+                <button onClick={() => addToCart(Product)} className="add-to-cart-button">
+                  Add to Cart
+                </button>
               </div>
             </div>
           ))}
         </div>
       </div>
     </>
-
   );
 }
+
 export default HomePage;

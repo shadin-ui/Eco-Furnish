@@ -43,7 +43,7 @@ function HomePage({ addToCart }) {
       </div>
 
       <div className="best-selling-section">
-        <h2 className="section-title">Trending Products<br />For You!!</h2>
+        <h2 className="section-title">Trending Products<br />For You!</h2>
         <div className="product-grid">
           {filteredProducts.map((Product) => (
             <div key={Product.id} className="product-card">

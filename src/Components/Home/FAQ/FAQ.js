@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './FAQ.css';
 
 
+
 const FAQ = () => {
   const [activeIndex, setActiveIndex] = useState(null);
   const [closingIndex, setClosingIndex] = useState(null); // New state for closing animation

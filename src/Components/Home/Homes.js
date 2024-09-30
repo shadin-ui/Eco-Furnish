@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 import Categories from '../Pages/Categories/Categorie';
 import Footer from '../Footer/Footer';
 import FAQ from './FAQ/FAQ';
+import Newsletter from './Newsletter/Newsletter';
 
 function HomePage({ addToCart }) {
   const [bestSellingProducts, setBestSellingProducts] = useState([]);
@@ -32,10 +33,6 @@ function HomePage({ addToCart }) {
         </Link>
       </div>
 
-
-      
-      
-
       <div className="best-selling-section">
         <h2 className="section-title">
           Trending Products<br />For You!
@@ -58,6 +55,7 @@ function HomePage({ addToCart }) {
       </div>
       <Categories />
       <FAQ />
+      <Newsletter />
       <Footer />
     </>
   );

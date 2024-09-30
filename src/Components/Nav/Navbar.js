@@ -42,7 +42,7 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
 
   return (
     <nav className={`navbar ${hidden ? 'hidden' : ''}`}>
-      <div className="logo">
+      <div>
         <Link to="/">
           <img src={Logo} alt="EcoFurnish Logo" className="logo-image" />
         </Link>
@@ -53,14 +53,14 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
         <li><Link to="/products">Products</Link></li>
       </ul>
       <div className={`search-bar ${searchActive ? 'active' : ''}`}>
-        <FontAwesomeIcon 
-          icon={faSearch} 
-          className="search-icon" 
+        <FontAwesomeIcon
+          icon={faSearch}
+          className="search-icon"
           onClick={() => setSearchActive(!searchActive)} // Toggle search bar visibility
         />
-        <input 
-          type="text" 
-          placeholder="Search products..." 
+        <input
+          type="text"
+          placeholder="Search products..."
         />
       </div>
       <ul className="auth-links">
@@ -73,11 +73,13 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
         )}
         <li>
           {isLoggedIn ? (
-            <button onClick={handleLogout}>Logout</button>
+            <button onClick={handleLogout} className='Logout-btn'>Logout</button>
           ) : (
-            <Link to="/login">
-              <FontAwesomeIcon icon={faUserCircle} />
+            <Link to="/login" className="login-link">
+              <span className="login-text">Login</span>
+              <FontAwesomeIcon icon={faUserCircle} className="login-icon" />
             </Link>
+
           )}
         </li>
       </ul>

@@ -14,6 +14,7 @@ import Bedroom from './Components/Pages/Categories/Bedroom/Bedroom';
 import Decor from './Components/Pages/Categories/Decor/Decor';
 
 
+
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [cartItems, setCartItems] = useState([]);
@@ -36,6 +37,7 @@ function App() {
         <Route path="/login" element={<Login setIsLoggedIn={setIsLoggedIn} />} />
         <Route path="/signup" element={<Register />} />
         <Route path="/cart" element={isLoggedIn ? <Cart cartItems={cartItems} /> : <h2>Please log in to view your cart</h2>} />
+        
       </Routes>
       
     </Router>

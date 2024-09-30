@@ -1,0 +1,91 @@
+.footer-section {
+    background-color: #023f45; /* Dark green background */
+    color: #ffffff; /* Dark text color */
+    padding: 40px 20px;
+    text-align: center;
+    position: relative;
+    top: 170px;
+}
+
+.footer-logo {
+    margin-bottom: 20px;
+    
+}
+.logo-image{
+    height: 60px;
+    
+}
+
+
+
+
+.footer-columns {
+    border-top: 2px solid #f9c63d;
+    display: flex;
+    justify-content: space-around;
+    padding: 20px 0;
+}
+
+.footer-column h4 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.footer-column ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.footer-column li {
+    margin: 8px 0;
+}
+
+.footer-column a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-column a:hover {
+    color: #f9c63d; /* Hover color */
+}
+
+.footer-bottom {
+    border-top: 1px solid #f9c63d;
+    border-width: 2px;
+    margin-top: 20px;
+    padding-top: 10px;
+}
+
+.footer-bottom p {
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+.social-icons {
+    display: inline-block;
+    margin: 10px 0;
+    gap: 15px;
+}
+
+.social-icons a {
+    color: #ffffff;
+    font-size: 20px;
+    margin: 0 10px;
+}
+
+.social-icons a:hover {
+    color: #f9c63d; /* Social icon hover */
+}
+
+.payment-methods {
+    margin-top: 10px;
+}
+
+.payment-methods img {
+    height: 50px;
+    margin: 0 50px;
+    position: relative;
+    top: 25px;
+    
+}

@@ -1,5 +1,5 @@
 .offer-container {
-    background-color: #004430; /* Green background */
+    background-color: #023f45; /* Green background */
     color: white; /* White text */
     text-align: center;
     padding: 30px;
@@ -10,9 +10,14 @@
     position: relative;
     top: 50px;
   }
-  
-  .offer-text {
-    font-size:35px;
-    font-weight: bold;
-  }
-  
+.offer-discount-container{
+  background-color: rgb(250, 183, 28);
+  color: rgb(0, 35, 0);
+  padding: 1px;
+  border-radius: 30px;
+}
+.offer-discount-text{
+  font-size: 40px;
+  position: relative;
+  top: 20px;
+}

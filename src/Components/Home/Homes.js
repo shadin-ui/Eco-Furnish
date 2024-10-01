@@ -1,28 +1,51 @@
 import React, { useState, useEffect } from 'react';
-import productsData from '../Api/db.json'
+import productsData from '../Api/db.json';
 import './Homes.css';
 import Background from '../Images/Background.png';
 import Features from './Feature/Features';
 import Offer from './Feature/Offer';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Categories from '../Pages/Categories/Categorie';
 import Footer from '../Footer/Footer';
 import FAQ from './FAQ/FAQ';
 import Newsletter from './Newsletter/Newsletter';
 
-function HomePage({ addToCart }) {
+function HomePage({ addToCart, isLoggedIn }) {
+  const navigate = useNavigate(); // Create a navigate instance
   const [bestSellingProducts, setBestSellingProducts] = useState([]);
+  const [addedProductIds, setAddedProductIds] = useState([]);
+  const [notification, setNotification] = useState('');
 
   useEffect(() => {
     const bestSellers = productsData.products.filter((Product) => Product.price >= 500);
     setBestSellingProducts(bestSellers);
   }, []);
 
+  const handleAddToCart = (Product) => {
+    if (!isLoggedIn) {
+      // Redirect to login page if not logged in
+      navigate('/login');
+      return;
+    }
+    
+    // Add product to cart
+    addToCart(Product);
+    setAddedProductIds((prevIds) => [...prevIds, Product.id]);
+    setNotification(`Product "${Product.type}" added to cart!`);
+    
+    // Clear notification after 3 seconds
+    setTimeout(() => {
+      setNotification('');
+    }, 3000);
+  };
+
   return (
     <>
       <div>
         <img src={Background} alt="Background" className="homepage-section" />
       </div>
+
+      {notification && <div className="notification">{notification}</div>}
       
       <Features />
       <Offer />
@@ -45,8 +68,11 @@ function HomePage({ addToCart }) {
               <p className="product-price">₹{Product.price}</p>
               <p className="product-rating">Rating: {Product.stars} ★</p>
               <div>
-                <button onClick={() => addToCart(Product)} className="add-to-cart-button">
-                  Add to Cart
+                <button 
+                  onClick={() => handleAddToCart(Product)} 
+                  className="add-to-cart-button"
+                >
+                  {addedProductIds.includes(Product.id) ? 'Added' : 'Add to Cart'}
                 </button>
               </div>
             </div>

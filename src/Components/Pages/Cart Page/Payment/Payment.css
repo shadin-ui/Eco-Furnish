@@ -1,0 +1,71 @@
+.payment-container {
+    padding: 30px;
+    background-color: #ffffff; /* White background */
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    max-width: 600px; /* Limit the width for better presentation */
+    margin: 0 auto; /* Center the container 
+    
+}
+
+.order-summary {
+    margin-bottom: 25px;
+}
+
+.checkout-item {
+    display: flex; /* Flexbox for aligning items */
+    margin-bottom: 15px;
+    border-bottom: 1px solid #eee; /* Light border for separation */
+    padding-bottom: 10px;
+}
+
+.product-image {
+    width: 80px; /* Fixed size for images */
+    height: 80px; /* Fixed size for images */
+    border-radius: 5px; /* Rounded corners for images */
+    margin-right: 15px; /* Space between image and text */
+}
+
+.item-details {
+    flex-grow: 1; /* Allow details to take remaining space */
+}
+
+.payment-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.payment-form input {
+    margin-bottom: 15px;
+    padding: 12px;
+    border: 1px solid #007bff; /* Blue border */
+    border-radius: 5px;
+    transition: border-color 0.3s ease; /* Smooth border color transition */
+}
+
+.payment-form input:focus {
+    border-color: #0056b3; /* Darker blue on focus */
+    outline: none; /* Remove default outline */
+}
+
+.cta-button {
+    padding: 12px;
+    background-color: #007bff; /* Blue color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 1rem; /* Larger font size */
+}
+
+.cta-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.success-message {
+    margin-top: 20px;
+    color: #28a745; /* Green for success */
+    font-weight: bold; /* Bold for emphasis */
+    font-size: 1.2rem; /* Slightly larger font size */
+}

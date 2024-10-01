@@ -19,6 +19,8 @@ const Login = ({ setIsLoggedIn }) => {
       if (user) {
         alert('Login successful!');
         setIsLoggedIn(true);
+        localStorage.setItem('isLoggedIn', true);
+        localStorage.setItem('loggedInUser', JSON.stringify(user)); // Storing the user details
         navigate('/');
       } else {
         alert('Invalid email or password');

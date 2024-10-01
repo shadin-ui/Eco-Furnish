@@ -1,10 +1,9 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import './Navbar.css';
 import Logo from '../Images/Logos.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCartPlus, faUserCircle, faSearch } from '@fortawesome/free-solid-svg-icons';
-import { useState, useEffect } from 'react';
+import { faCartArrowDown, faUserCircle, faSearch } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
   const handleLogout = () => {
@@ -14,30 +13,23 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
 
   const [hidden, setHidden] = useState(false);
   const [lastScrollTop, setLastScrollTop] = useState(0);
-  const [searchActive, setSearchActive] = useState(false); // New state for search bar
+  const [searchActive, setSearchActive] = useState(false); // State for search bar
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
 
       if (scrollTop > window.innerHeight) {
-        if (scrollTop > lastScrollTop) {
-          setHidden(true); // Hide the navbar
-        } else {
-          setHidden(false); // Show the navbar
-        }
+        setHidden(scrollTop > lastScrollTop); // Hide or show navbar
       } else {
-        setHidden(false); // Show the navbar when above 100vh
+        setHidden(false); // Show navbar when above 100vh
       }
 
-      setLastScrollTop(scrollTop); // Update the last scroll position
+      setLastScrollTop(scrollTop); // Update last scroll position
     };
 
     window.addEventListener('scroll', handleScroll);
-
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, [lastScrollTop]);
 
   return (
@@ -66,8 +58,8 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
       <ul className="auth-links">
         {isLoggedIn && (
           <li>
-            <Link to="/cart">
-              <FontAwesomeIcon icon={faCartPlus} />
+            <Link to="/cart" className='cart-icon'>
+              <FontAwesomeIcon icon={faCartArrowDown} />
             </Link>
           </li>
         )}
@@ -79,7 +71,6 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
               <span className="login-text">Login</span>
               <FontAwesomeIcon icon={faUserCircle} className="login-icon" />
             </Link>
-
           )}
         </li>
       </ul>

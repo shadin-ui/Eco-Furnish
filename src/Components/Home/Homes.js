@@ -17,7 +17,7 @@ function HomePage({ addToCart, isLoggedIn }) {
   const [notification, setNotification] = useState('');
 
   useEffect(() => {
-    const bestSellers = productsData.products.filter((Product) => Product.price >= 500);
+    const bestSellers = productsData.products.filter((Product) => Product.price >= 5);
     setBestSellingProducts(bestSellers);
   }, []);
 

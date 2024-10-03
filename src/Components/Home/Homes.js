@@ -50,11 +50,7 @@ function HomePage({ addToCart, isLoggedIn }) {
       <Features />
       <Offer />
 
-      <div className="about-us-button-section">
-        <Link to="/about" className="about-us-button">
-          About Us
-        </Link>
-      </div>
+      
 
       <div className="best-selling-section">
         <h2 className="section-title">
@@ -78,6 +74,12 @@ function HomePage({ addToCart, isLoggedIn }) {
             </div>
           ))}
         </div>
+      </div>
+      
+      <div className="about-us-button-section">
+        <Link to="/about" className="about-us-button">
+          About Us
+        </Link>
       </div>
       <Categories />
       <FAQ />

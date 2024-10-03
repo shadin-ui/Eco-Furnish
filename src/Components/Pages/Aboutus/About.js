@@ -2,7 +2,6 @@ import React from 'react';
 import './About.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import FontAwesomeIcon component
 import { faTree, faRocket, faAward, faLightbulb, faGlobe } from '@fortawesome/free-solid-svg-icons'; // Import specific icons
-import Features from '../../Home/Feature/Features';
 import Footer from '../../Footer/Footer';
 
 const About = () => {
@@ -41,7 +40,7 @@ const About = () => {
         <h2>Our Global Reach</h2>
         <p>EcoFurnish has reached homes across the globe. We are proud to bring eco-friendly furniture to households in various countries, impacting lives while promoting a greener planet.</p>
       </div>
-      <Features />
+      
       <Footer />
       
     </div>

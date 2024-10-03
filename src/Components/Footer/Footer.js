@@ -21,29 +21,29 @@ function Footer() {
         <div className="footer-column">
           <h4>About</h4>
           <ul>
-            <li><a href="/">Our Company</a></li>
-            <li><a href="/">Our Story</a></li>
-            <li><a href="/">Blog</a></li>
+            <li><a href="/about">Our Company</a></li>
+            <li><a href="/about">Our Story</a></li>
+            <li><a href="/about">Blog</a></li>
           </ul>
         </div>
 
         <div className="footer-column">
           <h4>Information</h4>
           <ul>
-            <li><a href="/">Delivery Information</a></li>
-            <li><a href="/">Privacy Policy</a></li>
-            <li><a href="/">Terms & Conditions</a></li>
-            <li><a href="/">Return</a></li>
+            <li><a href="/about">Delivery Information</a></li>
+            <li><a href="/abouy">Privacy Policy</a></li>
+            <li><a href="/about">Terms & Conditions</a></li>
+            <li><a href="/about">Return</a></li>
           </ul>
         </div>
 
         <div className="footer-column">
           <h4>Support</h4>
           <ul>
-            <li><a href="/">Contact Us</a></li>
-            <li><a href="/">Help</a></li>
-            <li><a href="/">FAQ</a></li>
-            <li><a href="/">Checkout</a></li>
+            <li><a href="/about">Contact Us</a></li>
+            <li><a href="/about">Help</a></li>
+            <li><a href="/about">FAQ</a></li>
+            <li><a href="/products">Checkout</a></li>
           </ul>
         </div>
       </div>
@@ -56,7 +56,7 @@ function Footer() {
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faXTwitter} />
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/m_shadin.k?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" rel="noopener noreferrer">
               <FontAwesomeIcon icon={faInstagram} />
             </a>
           </div>

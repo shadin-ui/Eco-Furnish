@@ -3,7 +3,7 @@
     max-width: 800px;
     text-align: center;
     position: relative;
-    top: 150px;
+    top: 170px;
 }
 
 .faq-section h2 {
@@ -14,7 +14,7 @@
 .faq-items {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
 }
 
 .faq-item {
@@ -27,7 +27,7 @@
 }
 
 .faq-item:hover {
-    background-color: #e0e0e0;
+    background-color: #ffffff;
     transform: scale(1.02);
 }
 
@@ -45,7 +45,6 @@
     padding: 10px;
     border-radius: 8px;
 }
-
 .faq-icon {
     font-size: 18px;
     transition: transform 0.3s;

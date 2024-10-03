@@ -70,8 +70,8 @@
 }
 
 .register-container button:hover {
-  color: rgb(0, 229, 255);
-  background-color: #91020296; /* Match hover color */
+  color: rgb(0, 0, 0);
+  background-color: #ffffff; /* Match hover color */
 }
 
 .register-container p {

@@ -10,7 +10,6 @@
 
 .best-selling-section {
   padding: 50px 20px;
-  background-color: #f0f4f8;
   text-align: center;
 }
 
@@ -100,33 +99,54 @@
 .product-rating i {
   margin-left: 5px;
 }
-
-
-
 .about-us-button-section {
-  text-align: center;
-  margin-top: 20px;
-  position: relative;
-  top: 80px;
+  text-align: center; /* Center align the button */
+  margin-top: 20px; /* Space above the button */
+  position: relative; /* Position relative to use pseudo-element */
+  top: 35px; /* Move the section down */
 }
 
 .about-us-button {
-  background-color: #007bff;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  text-decoration: none;
-  font-size: 16px;
-  cursor: pointer;
+  position: relative; /* Position relative to use pseudo-element */
+  background-color: #007bff; /* Set the background color */
+  color: white; /* Button text color */
+  padding: 10px 20px; /* Padding for the button */
+  border: none; /* Remove default border */
+  border-radius: 5px; /* Rounded corners */
+  text-decoration: none; /* Remove underline from the link */
+  font-size: 16px; /* Font size for the button */
+  cursor: pointer; /* Pointer cursor on hover */
+  overflow: hidden; /* Hide the overflow for the pseudo-element */
+  transition: color 0.3s ease; /* Transition for text color */
+}
+
+.about-us-button::before {
+  content: ""; /* Pseudo-element needs content */
+  position: absolute; /* Position absolutely to the button */
+  top: 0; /* Align to the top */
+  left: 0; /* Start from the left */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.6), rgba(0, 123, 255, 0.4)); /* Gradient fill */
+  transform: scaleX(0); /* Initially hide the gradient */
+  transform-origin: left; /* Scale from the left */
+  transition: transform 0.5s ease; /* Smooth transition for the fill effect */
+  z-index: 0; /* Ensure it stays behind the button */
+}
+
+.about-us-button:hover::before {
+  transform: scaleX(1); /* Scale the fill to cover the button on hover */
 }
 
 .about-us-button:hover {
-  background-color: #0056b3;
+  color: black; /* Change text color on hover */
+  background-color: #0056b3; /* Change background color on hover */
+  z-index: 1; /* Ensure button text is above the gradient */
 }
 
 .category-section {
   margin: 2rem 0;
+  position: relative;
 }
 
 .category-title {

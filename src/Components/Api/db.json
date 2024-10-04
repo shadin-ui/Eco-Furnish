@@ -18,7 +18,7 @@
       "image": "https://i.pinimg.com/474x/23/86/7d/23867da35f96d83e0255d2e67e80ba6b.jpg",
       "imageCategory": "Dining Set",
       "description": "Nordviken Table and 6 Chairs",
-      "price": 799,
+      "price": 7,
       "quantity": 5,
       "offerPrice": 639.2,
       "details": "Create a classic dining experience with the Nordviken Table and 6 Chairs in Antique Stain. This dining set features a sturdy table and comfortable chairs, perfect for family meals or gatherings. The timeless design and durable construction ensure long-lasting enjoyment.",
@@ -39,7 +39,7 @@
     {
       "id": "4",
       "type": "Living Room Furniture",
-      "image": "https://i.pinimg.com/564x/ed/8c/bb/ed8cbbb2a62b34f2040abbd8697b15f9.jpg",
+      "image": "https://m.media-amazon.com/images/I/71BB-2VYFoL._AC_UF894,1000_QL80_.jpg",
       "imageCategory": "Coffee Table",
       "description": "Vittsjoe Coffee Table",
       "price": 499.99,
@@ -126,7 +126,7 @@
       "image": "https://i.pinimg.com/564x/7a/ce/21/7ace213dac0cdf2cc397030fa5a6186a.jpg",
       "imageCategory": "Corner Sleeper Sofa",
       "description": "Finnala Sleeper Sofa",
-      "price": 1299,
+      "price": 9,
       "quantity": 3,
       "offerPrice": 909.3,
       "details": "Add versatility to your living room with the Finnala Corner Sleeper Sofa. This 5-seat sofa includes a chaise lounge, perfect for lounging or hosting guests. Its corner design maximizes space, while the sleeper function offers additional comfort for overnight guests.",
@@ -136,6 +136,42 @@
       "id": "12",
       "type": "Bedroom Furniture",
       "image": "https://i.pinimg.com/474x/df/04/e3/df04e3dc975255f9e13736145379e64b.jpg",
+      "imageCategory": "Bed Frame",
+      "description": "Malm Bed Frame",
+      "price": 299,
+      "quantity": 6,
+      "offerPrice": 239.2,
+      "details": "Upgrade your bedroom with the Malm Bed Frame in Black-Brown. This modern bed frame features a sleek design and sturdy construction, providing a perfect foundation for a good night's sleep. The minimalist look complements any bedroom decor.",
+      "category": "Bedroom"
+    },
+    {
+      "id": "13",
+      "type": "Bedroom Furniture",
+      "image": "https://www.vidaxl.com/dw/image/v2/BFNS_PRD/on/demandware.static/-/Sites-vidaxl-catalog-master-sku/default/dw5b62e189/hi-res/436/460/3201518/image_1_3201518.jpg?sw=400",
+      "imageCategory": "Bed Frame",
+      "description": "Malm Bed Frame",
+      "price": 299,
+      "quantity": 6,
+      "offerPrice": 239.2,
+      "details": "Upgrade your bedroom with the Malm Bed Frame in Black-Brown. This modern bed frame features a sleek design and sturdy construction, providing a perfect foundation for a good night's sleep. The minimalist look complements any bedroom decor.",
+      "category": "Bedroom"
+    },
+    {
+      "id": "14",
+      "type": "Bedroom Furniture",
+      "image": "https://m.media-amazon.com/images/I/61ZHpaiflgL._AC_UF894,1000_QL80_.jpg",
+      "imageCategory": "Bed Frame",
+      "description": "Malm Bed Frame",
+      "price": 299,
+      "quantity": 6,
+      "offerPrice": 239.2,
+      "details": "Upgrade your bedroom with the Malm Bed Frame in Black-Brown. This modern bed frame features a sleek design and sturdy construction, providing a perfect foundation for a good night's sleep. The minimalist look complements any bedroom decor.",
+      "category": "Bedroom"
+    },
+    {
+      "id": "15",
+      "type": "Bedroom Furniture",
+      "image": "https://ideacdn.net/idea/dq/03/myassets/products/760/8681285941565-1.jpg?revision=1697143329",
       "imageCategory": "Bed Frame",
       "description": "Malm Bed Frame",
       "price": 299,
@@ -174,42 +210,42 @@
   ],
   "categories": [
     {
-      "id": "1",
+      "id": "41",
       "name": "Furniture",
       "description": "High-quality furniture for every room."
     },
     {
-      "id": "2",
+      "id": "42",
       "name": "Bedroom",
       "description": "Comfortable and stylish bedroom solutions."
     },
     {
-      "id": "3",
+      "id": "43",
       "name": "Living Room",
       "description": "Stylish furniture to enhance your living area."
     },
     {
-      "id": "4",
+      "id": "44",
       "name": "Dining Room",
       "description": "Elegant dining sets for every occasion."
     },
     {
-      "id": "5",
+      "id": "45",
       "name": "Office",
       "description": "Functional office furniture for productivity."
     },
     {
-      "id": "6",
+      "id": "46",
       "name": "Outdoor",
       "description": "Durable outdoor furniture for relaxation."
     },
     {
-      "id": "7",
+      "id": "47",
       "name": "Storage",
       "description": "Smart storage solutions for your home."
     },
     {
-      "id": "8",
+      "id": "48",
       "name": "Decor",
       "description": "Beautiful decor items to personalize your space."
     }

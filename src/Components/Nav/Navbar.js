@@ -42,7 +42,8 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
       <ul className="nav-links">
         <li><Link to="/">Home</Link></li>
         <li><Link to="/about">About us</Link></li>
-        <li><Link to="/products">Products</Link></li>
+        <li><Link to="/products">Categories</Link></li>
+        <li><Link to="/testimonial">Testimonial</Link></li>
       </ul>
       <div className={`search-bar ${searchActive ? 'active' : ''}`}>
         <FontAwesomeIcon

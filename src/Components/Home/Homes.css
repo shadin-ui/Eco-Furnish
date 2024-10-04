@@ -14,10 +14,13 @@
 }
 
 .section-title {
-  font-size: 3rem;
+  font-size: 450%;
   margin-bottom: 40px;
-  color: #2c3e50;
-  font-family: 'Poppins', sans-serif;
+  color: #023f45;
+  font-family: "Syne", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
 }
 
 /* Product grid styling */
@@ -54,7 +57,7 @@
   font-size: 1.5rem;
   margin-bottom: 10px;
   color: #34495e;
-  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
 }
 
 /* Product price */

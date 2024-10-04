@@ -9,6 +9,7 @@
 .faq-section h2 {
     font-size: 30px;
     margin-bottom: 20px;
+    font-family: "Syne", sans-serif;
 }
 
 .faq-items {
@@ -27,8 +28,9 @@
 }
 
 .faq-item:hover {
-    background-color: #ffffff;
     transform: scale(1.02);
+    box-shadow: 1px 1px 100px rgba(0, 0, 0, 0.258);
+
 }
 
 .faq-item.active .faq-question {
@@ -84,4 +86,5 @@
 .faq-question:hover{
     background: #004e4e;
     color: #e0e0e0;
+    
 }

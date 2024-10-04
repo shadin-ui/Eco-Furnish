@@ -13,6 +13,7 @@ import Categories from './Components/Pages/Categories/Categorie';
 import Furniture from './Components/Pages/Categories/Furniture/Furniture';
 import Bedroom from './Components/Pages/Categories/Bedroom/Bedroom';
 import Decor from './Components/Pages/Categories/Decor/Decor';
+import Testimonial from './Components/Pages/Testimonials/Testimonial';
 
 function App() {
   const [isLoggedIn, setIsLoggedIn] = useState(() => {
@@ -44,6 +45,7 @@ function App() {
   };
 
   return (
+    <>
     <Router>
       <Navbar isLoggedIn={isLoggedIn} setIsLoggedIn={setIsLoggedIn} />
       <ScrollToTop />
@@ -58,8 +60,10 @@ function App() {
         <Route path="/signup" element={<Register />} />
         <Route path="/cart" element={isLoggedIn ? <Cart cartItems={cartItems} removeFromCart={removeFromCart} /> : <h2>Please log in to view your cart</h2>} />
         <Route path="/checkout" element={isLoggedIn ? <Checkout cartItems={cartItems} clearCart={clearCart} /> : <h2>Please log in to proceed to checkout</h2>} />
+        <Route path='/testimonial' element={<Testimonial />}/>
       </Routes>
     </Router>
+    </>
   );
 }
 

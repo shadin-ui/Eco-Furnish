@@ -37,18 +37,18 @@
   color: #ffffff;
   font-size: 20px;
   font-weight: 500;
-  width: 90%; /* Set to 90% to match the container's width */
-  margin: 10px 0; /* Adjust margin to keep it consistent */
-  padding: 13px; /* Match padding from login */
-  border: 2px solid #018d6f; /* Match border color */
-  border-radius: 9px; /* Match border radius */
+  width: 90%;
+  margin: 10px 0; 
+  padding: 13px; 
+  border: 2px solid #018d6f; 
+  border-radius: 9px; 
 }
 
 .login-container button {
   padding: 10px;
   position: relative;
   top: 8px;
-  background-color: #02917296; /* Teal */
+  background-color: #02917296; 
   color: rgb(255, 255, 255);
   border: none;
   border-radius: 50px;
@@ -59,7 +59,7 @@
 }
 .login-container button:hover {
   color: rgb(0, 0, 0);
-  background-color: #ffffff; /* Match hover color */
+  background-color: #ffffff; 
 }
 .login-container p {
   text-align: center;

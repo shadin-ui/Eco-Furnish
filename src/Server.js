@@ -1,19 +1,19 @@
 
 const express = require('express');
 const cors = require('cors');
-const stripe = require('stripe')('your-secret-key-here'); // Replace with your Stripe secret key
+const stripe = require('stripe')('your-secret-key-here'); 
 
 const app = express();
 app.use(cors());
 app.use(express.json());
 
 app.post('/create-payment-intent', async (req, res) => {
-  const { amount } = req.body; // amount in cents
+  const { amount } = req.body; 
 
   try {
     const paymentIntent = await stripe.paymentIntents.create({
       amount,
-      currency: 'inr', // Change to your desired currency
+      currency: 'inr', 
     });
     res.send({ id: paymentIntent.id });
   } catch (error) {

@@ -13,19 +13,19 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
 
   const [hidden, setHidden] = useState(false);
   const [lastScrollTop, setLastScrollTop] = useState(0);
-  const [searchActive, setSearchActive] = useState(false); // State for search bar
+  const [searchActive, setSearchActive] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollTop = window.scrollY;
 
       if (scrollTop > window.innerHeight) {
-        setHidden(scrollTop > lastScrollTop); // Hide or show navbar
+        setHidden(scrollTop > lastScrollTop);
       } else {
-        setHidden(false); // Show navbar when above 100vh
+        setHidden(false);
       }
 
-      setLastScrollTop(scrollTop); // Update last scroll position
+      setLastScrollTop(scrollTop);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -49,7 +49,7 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
         <FontAwesomeIcon
           icon={faSearch}
           className="search-icon"
-          onClick={() => setSearchActive(!searchActive)} // Toggle search bar visibility
+          onClick={() => setSearchActive(!searchActive)}
         />
         <input
           type="text"

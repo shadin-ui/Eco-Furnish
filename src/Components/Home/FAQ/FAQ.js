@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import './FAQ.css';
 
-
-
 const FAQ = () => {
   const [activeIndex, setActiveIndex] = useState(null);
-  const [closingIndex, setClosingIndex] = useState(null); // New state for closing animation
+  const [closingIndex, setClosingIndex] = useState(null);
 
   const faqs = [
     {
@@ -30,18 +28,13 @@ const FAQ = () => {
     },
   ];
 
-
-  
   const toggleFAQ = (index) => {
     if (activeIndex === index) {
-      // Start the closing animation
       setClosingIndex(index);
-
-      // Wait for the transition to finish before actually closing
       setTimeout(() => {
         setActiveIndex(null);
         setClosingIndex(null);
-      }, 400); // Match the CSS transition duration
+      }, 400);
     } else {
       setActiveIndex(index);
     }

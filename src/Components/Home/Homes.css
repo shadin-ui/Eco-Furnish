@@ -23,14 +23,12 @@
   font-style: normal;
 }
 
-/* Product grid styling */
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
 }
 
-/* Product card styling */
 .product-card {
   background-color: #fff;
   padding: 20px;
@@ -44,7 +42,6 @@
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
 }
 
-/* Image styling */
 .product-imag {
   width: 100%;
   height: auto;
@@ -52,7 +49,6 @@
   margin-bottom: 15px;
 }
 
-/* Product name */
 .product-name {
   font-size: 1.5rem;
   margin-bottom: 10px;
@@ -60,14 +56,12 @@
   font-weight: 600;
 }
 
-/* Product price */
 .product-price {
   font-size: 1.2rem;
   color: #27ae60;
   margin-bottom: 10px;
 }
 
-/* Product rating */
 .product-rating {
   font-size: 1rem;
   color: #f39c12;
@@ -76,11 +70,10 @@
   align-items: center;
 }
 
-/* Add to cart button */
 .add-to-cart-button {
   padding: 10px 25px;
-  background-color: #3498db;
-  color: white;
+  background-color: #0066ff;
+  color: rgb(255, 255, 255);
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -93,58 +86,57 @@
   background-color: #2980b9;
 }
 
-/* Add Font Awesome cart icon */
 .add-to-cart-button i {
   margin-right: 8px;
 }
 
-/* Icon for product rating */
 .product-rating i {
   margin-left: 5px;
 }
+
 .about-us-button-section {
-  text-align: center; /* Center align the button */
-  margin-top: 20px; /* Space above the button */
-  position: relative; /* Position relative to use pseudo-element */
-  top: 35px; /* Move the section down */
+  text-align: center;
+  margin-top: 20px;
+  position: relative;
+  top: 35px;
 }
 
 .about-us-button {
-  position: relative; /* Position relative to use pseudo-element */
-  background-color: #007bff; /* Set the background color */
-  color: white; /* Button text color */
-  padding: 10px 20px; /* Padding for the button */
-  border: none; /* Remove default border */
-  border-radius: 5px; /* Rounded corners */
-  text-decoration: none; /* Remove underline from the link */
-  font-size: 16px; /* Font size for the button */
-  cursor: pointer; /* Pointer cursor on hover */
-  overflow: hidden; /* Hide the overflow for the pseudo-element */
-  transition: color 0.3s ease; /* Transition for text color */
+  position: relative;
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 170%;
+  cursor: pointer;
+  overflow: hidden;
+  transition: color 0.3s ease;
 }
 
 .about-us-button::before {
-  content: ""; /* Pseudo-element needs content */
-  position: absolute; /* Position absolutely to the button */
-  top: 0; /* Align to the top */
-  left: 0; /* Start from the left */
-  width: 100%; /* Full width */
-  height: 100%; /* Full height */
-  background: linear-gradient(90deg, rgba(255, 255, 255, 0.6), rgba(0, 123, 255, 0.4)); /* Gradient fill */
-  transform: scaleX(0); /* Initially hide the gradient */
-  transform-origin: left; /* Scale from the left */
-  transition: transform 0.5s ease; /* Smooth transition for the fill effect */
-  z-index: 0; /* Ensure it stays behind the button */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.6), rgba(0, 123, 255, 0.4));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s ease;
+  z-index: 0;
 }
 
 .about-us-button:hover::before {
-  transform: scaleX(1); /* Scale the fill to cover the button on hover */
+  transform: scaleX(1);
 }
 
 .about-us-button:hover {
-  color: black; /* Change text color on hover */
-  background-color: #0056b3; /* Change background color on hover */
-  z-index: 1; /* Ensure button text is above the gradient */
+  color: black;
+  background-color: #0056b3;
+  z-index: 1;
 }
 
 .category-section {
@@ -157,12 +149,13 @@
   margin-bottom: 1rem;
   text-align: center;
 }
+
 .notification {
   position: fixed;
   top: 20px;
   left: 50%;
   transform: translateX(-50%);
-  background-color: #28a745;
+  background-color: #18a439;
   color: white;
   padding: 10px 20px;
   border-radius: 5px;

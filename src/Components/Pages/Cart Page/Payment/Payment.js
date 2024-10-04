@@ -15,7 +15,7 @@ const Payment = ({ cartItems, clearCart }) => {
   const handlePayment = (e) => {
     e.preventDefault();
     setIsSuccessful(true);
-    clearCart(); // Clear the cart on successful payment
+    clearCart();
     alert('Payment successful!');
   };
 

@@ -1,18 +1,17 @@
 import React from 'react';
 import './About.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'; // Import FontAwesomeIcon component
-import { faTree, faRocket, faAward, faLightbulb, faGlobe } from '@fortawesome/free-solid-svg-icons'; // Import specific icons
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faTree, faRocket, faAward, faLightbulb, faGlobe } from '@fortawesome/free-solid-svg-icons';
 import Footer from '../../Footer/Footer';
 
 const About = () => {
   return (
-    
     <div className="about-page">
       <h1>About Us</h1>
       <p>Welcome to EcoFurnish, where innovation meets sustainability. We are committed to designing and creating furniture that blends modern aesthetics with environmental responsibility.</p>
       
       <div className="about-section">
-        <FontAwesomeIcon icon={faTree} className="about-icon" /> {/* Correct FontAwesome icon usage */}
+        <FontAwesomeIcon icon={faTree} className="about-icon" />
         <h2>The EcoFurnish Story</h2>
         <p>Our journey began with a single goal: to bring eco-friendly furniture to homes around the world. EcoFurnish was founded to craft sustainable furniture while maintaining high-quality designs that suit modern living spaces.</p>
       </div>
@@ -42,7 +41,6 @@ const About = () => {
       </div>
       
       <Footer />
-      
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faInstagram, faXTwitter } from '@fortawesome/free-brands-svg-icons'; // Updated icons
+import { faFacebook, faInstagram, faXTwitter } from '@fortawesome/free-brands-svg-icons'; 
 import './Footer.css';
 import Logo from '../Images/Logos.png';
 import { Link } from 'react-router-dom';

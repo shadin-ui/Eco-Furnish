@@ -1,6 +1,6 @@
 .footer-section {
-    background-color: #023f45; /* Dark green background */
-    color: #ffffff; /* Dark text color */
+    background-color: #023f45;
+    color: #ffffff;
     padding: 40px 20px;
     text-align: center;
     position: relative;
@@ -12,12 +12,10 @@
     display: flex;
     justify-content: center;
 }
-.logo-image{
-    height: 200px;
-    
-    
-}
 
+.logo-image {
+    height: 200px;
+}
 
 .footer-columns {
     border-top: 2px solid #f9c63d;
@@ -47,7 +45,7 @@
 }
 
 .footer-column a:hover {
-    color: #f9c63d; /* Hover color */
+    color: #f9c63d;
 }
 
 .footer-bottom {
@@ -76,12 +74,11 @@
 }
 
 .social-icons a:hover {
-    color: #f9c63d; /* Social icon hover */
+    color: #f9c63d;
 }
 
 .payment-methods {
     margin-top: 10px;
-    
 }
 
 .payment-methods img {

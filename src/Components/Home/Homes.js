@@ -11,29 +11,26 @@ import FAQ from './FAQ/FAQ';
 import Newsletter from './Newsletter/Newsletter';
 
 function HomePage({ addToCart, isLoggedIn }) {
-  const navigate = useNavigate(); // Create a navigate instance
+  const navigate = useNavigate();
   const [bestSellingProducts, setBestSellingProducts] = useState([]);
   const [addedProductIds, setAddedProductIds] = useState([]);
   const [notification, setNotification] = useState('');
 
   useEffect(() => {
-    const bestSellers = productsData.products.filter((Product) => Product.price >= 5);
+    const bestSellers = productsData.products.filter((Product) => Product.price >= 10);
     setBestSellingProducts(bestSellers);
   }, []);
 
   const handleAddToCart = (Product) => {
     if (!isLoggedIn) {
-      // Redirect to login page if not logged in
       navigate('/login');
       return;
     }
-    
-    // Add product to cart
+
     addToCart(Product);
     setAddedProductIds((prevIds) => [...prevIds, Product.id]);
     setNotification(`Product "${Product.type}" added to cart!`);
-    
-    // Clear notification after 3 seconds
+
     setTimeout(() => {
       setNotification('');
     }, 3000);
@@ -46,11 +43,9 @@ function HomePage({ addToCart, isLoggedIn }) {
       </div>
 
       {notification && <div className="notification">{notification}</div>}
-      
+
       <Features />
       <Offer />
-
-      
 
       <div className="best-selling-section">
         <h2 className="section-title">
@@ -64,8 +59,8 @@ function HomePage({ addToCart, isLoggedIn }) {
               <p className="product-price">₹{Product.price}</p>
               <p className="product-rating">Rating: {Product.stars} ★</p>
               <div>
-                <button 
-                  onClick={() => handleAddToCart(Product)} 
+                <button
+                  onClick={() => handleAddToCart(Product)}
                   className="add-to-cart-button"
                 >
                   {addedProductIds.includes(Product.id) ? 'Added' : 'Add to Cart'}
@@ -75,7 +70,7 @@ function HomePage({ addToCart, isLoggedIn }) {
           ))}
         </div>
       </div>
-      
+
       <div className="about-us-button-section">
         <Link to="/about" className="about-us-button">
           About Us

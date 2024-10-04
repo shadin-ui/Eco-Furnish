@@ -9,7 +9,7 @@ const testimonials = [
     testimonial: 'Best furniture in the town',
     rating: 5,
     imgSrc: 'https://pbs.twimg.com/profile_images/1649088268355653634/yRnzTnJg_400x400.jpg', 
-    bgColor: 'linear-gradient(to right, #ff335f, #f447b)' 
+    bgColor: 'linear-gradient(to right, #ff335f, #f47b)' 
   },
   {
     name: 'Prithviraj Sukumaran',
@@ -33,7 +33,7 @@ const Testimonial = () => {
             <h2 className="testimonial-name">{testimonial.name}</h2>
             <p className="testimonial-title">{testimonial.title}, {testimonial.agency}</p>
             <div className="testimonial-rating">
-              {'★'.repeat(testimonial.rating)} {/* Displays the rating stars */}
+              {'★'.repeat(testimonial.rating)}
             </div>
           </div>
           <div className="testimonial-content">

@@ -13,9 +13,9 @@ function Categories() {
         <Link to="/bedroom" className="category-button">
           Bedroom
         </Link>
-        <Link to="/decor" className="category-button">
+        {/* <Link to="/decor" className="category-button">
           Decor
-        </Link>
+        </Link> */}
       </div>
     </div>
   );

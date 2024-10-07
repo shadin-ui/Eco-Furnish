@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './Navbar.css';
 import Logo from '../Images/Logos.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCartArrowDown, faUserCircle, faSearch } from '@fortawesome/free-solid-svg-icons';
+import { faCartArrowDown, faUserCircle } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
   const handleLogout = () => {
@@ -13,7 +13,6 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
 
   const [hidden, setHidden] = useState(false);
   const [lastScrollTop, setLastScrollTop] = useState(0);
-  const [searchActive, setSearchActive] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,17 +44,6 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
         <li><Link to="/products">Categories</Link></li>
         <li><Link to="/testimonial">Testimonial</Link></li>
       </ul>
-      <div className={`search-bar ${searchActive ? 'active' : ''}`}>
-        <FontAwesomeIcon
-          icon={faSearch}
-          className="search-icon"
-          onClick={() => setSearchActive(!searchActive)}
-        />
-        <input
-          type="text"
-          placeholder="Search products..."
-        />
-      </div>
       <ul className="auth-links">
         {isLoggedIn && (
           <li>

@@ -10,7 +10,7 @@
       "quantity": 10,
       "offerPrice": 454.3,
       "details": "Enhance your living room with the Friheten Sleeper Sectional in Skiftebo Dark Gray. This versatile sofa offers spacious seating and convenient storage, perfect for small spaces. The sleeper feature provides a comfortable bed for guests, while the modern design complements various decor styles.",
-      "category": "Living Room"
+      "category": "Furniture"
     },
     {
       "id": "2",
@@ -94,7 +94,7 @@
       "quantity": 30,
       "offerPrice": 31.99,
       "details": "Upgrade your kitchen or bar area with the Stig Bar Stool in Black. This bar stool features a supportive backrest and comfortable seat, ideal for extended use. Its minimalist design and durable construction make it a stylish and practical choice.",
-      "category": "Dining Room"
+      "category": "Furniture"
     },
     {
       "id": "9",
@@ -106,7 +106,7 @@
       "quantity": 4,
       "offerPrice": 323.1,
       "details": "Create a productive workspace with the Bekant Corner Desk in Black Stained Ash Veneer. This corner desk offers ample space for work essentials and features a modern design. Its sturdy construction and practical layout enhance efficiency in any office setting.",
-      "category": "Office"
+      "category": "Furniture"
     },
     {
       "id": "10",
@@ -118,7 +118,7 @@
       "quantity": 10,
       "offerPrice": 69.3,
       "details": "Enjoy outdoor dining with the Askholmen Table and 2 Chairs in Light Brown Stained finish. This outdoor set features a compact design and durable materials, perfect for balconies or small patios. Its weather-resistant construction ensures long-term enjoyment.",
-      "category": "Outdoor"
+      "category": "Bedroom"
     },
     {
       "id": "11",
@@ -130,7 +130,7 @@
       "quantity": 3,
       "offerPrice": 909.3,
       "details": "Add versatility to your living room with the Finnala Corner Sleeper Sofa. This 5-seat sofa includes a chaise lounge, perfect for lounging or hosting guests. Its corner design maximizes space, while the sleeper function offers additional comfort for overnight guests.",
-      "category": "Living Room"
+      "category": "Furniture"
     },
     {
       "id": "12",
@@ -166,7 +166,7 @@
       "quantity": 6,
       "offerPrice": 239.2,
       "details": "Upgrade your bedroom with the Malm Bed Frame in Black-Brown. This modern bed frame features a sleek design and sturdy construction, providing a perfect foundation for a good night's sleep. The minimalist look complements any bedroom decor.",
-      "category": "Bedroom"
+      "category": "Furniture"
     },
     {
       "id": "15",
@@ -186,31 +186,29 @@
       "id": "d80c",
       "name": "Shadin",
       "email": "shadin@gmail.com",
-      "password": "sanu"
+      "password": "shadin",
+      "isAdmin": true
     },
     {
       "id": "7f68",
       "name": "Shammas",
       "email": "shammas@gmail.com",
-      "password": "shammu"
+      "password": "shammu",
+      "isAdmin": false
     },
     {
       "id": "57f1",
       "name": "Maher",
       "email": "maher@gmail.com",
-      "password": "maher"
+      "password": "maher",
+      "isAdmin": false
     },
     {
       "id": "37f7",
       "name": "sa",
       "email": "sa@g",
-      "password": "sa"
-    },
-    {
-      "id": "a638",
-      "name": "safrin",
-      "email": "safrin@gmail.com",
-      "password": "safrin"
+      "password": "sa",
+      "isAdmin": false
     }
   ],
   "categories": [

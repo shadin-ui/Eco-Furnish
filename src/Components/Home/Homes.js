@@ -9,11 +9,15 @@ import Categories from '../Pages/Categories/Categorie';
 import Footer from '../Footer/Footer';
 import FAQ from './FAQ/FAQ';
 import Newsletter from './Newsletter/Newsletter';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeart, faCartArrowDown } from '@fortawesome/free-solid-svg-icons';
+
 
 function HomePage({ addToCart, isLoggedIn }) {
   const navigate = useNavigate();
   const [bestSellingProducts, setBestSellingProducts] = useState([]);
   const [addedProductIds, setAddedProductIds] = useState([]);
+  const [wishlist, setWishlist] = useState([]);
   const [notification, setNotification] = useState('');
 
   useEffect(() => {
@@ -26,14 +30,22 @@ function HomePage({ addToCart, isLoggedIn }) {
       navigate('/login');
       return;
     }
-
     addToCart(Product);
     setAddedProductIds((prevIds) => [...prevIds, Product.id]);
     setNotification(`Product "${Product.type}" added to cart!`);
-
     setTimeout(() => {
       setNotification('');
     }, 3000);
+  };
+
+  const toggleWishlist = (Product) => {
+    setWishlist((prevWishlist) => {
+      if (prevWishlist.some((item) => item.id === Product.id)) {
+        return prevWishlist.filter((item) => item.id !== Product.id);
+      } else {
+        return [...prevWishlist, Product];
+      }
+    });
   };
 
   return (
@@ -41,12 +53,9 @@ function HomePage({ addToCart, isLoggedIn }) {
       <div>
         <img src={Background} alt="Background" className="homepage-section" />
       </div>
-
       {notification && <div className="notification">{notification}</div>}
-
       <Features />
       <Offer />
-
       <div className="best-selling-section">
         <h2 className="section-title">
           Trending Products<br />For You!
@@ -55,22 +64,31 @@ function HomePage({ addToCart, isLoggedIn }) {
           {bestSellingProducts.map((Product) => (
             <div key={Product.id} className="product-card">
               <img src={Product.image} alt={Product.name} className="product-imag" />
-              <h3 className="product-name">{Product.type}</h3>
-              <p className="product-price">₹{Product.price}</p>
-              <p className="product-rating">Rating: {Product.stars} ★</p>
-              <div>
+              <h3 className="product-name">{Product.imageCategory}</h3>
+              <p className="product-price">
+              <span className="offer-price"><s>₹{Product.offerPrice}</s></span><br/>
+                 ₹{Product.price}{' '}
+              </p>
+              <p className="product-rating">{Product.rating}</p>
+              <div className="product-actions">
                 <button
                   onClick={() => handleAddToCart(Product)}
                   className="add-to-cart-button"
                 >
+                  <FontAwesomeIcon icon={faCartArrowDown} />
                   {addedProductIds.includes(Product.id) ? 'Added' : 'Add to Cart'}
+                </button>
+                <button
+                  onClick={() => toggleWishlist(Product)}
+                  className={`wishlist-button ${wishlist.some((item) => item.id === Product.id) ? 'active' : ''}`}
+                >
+                  <FontAwesomeIcon className='heart-icon-wish' icon={faHeart} filled={wishlist.some((item) => item.id === Product.id)} />
                 </button>
               </div>
             </div>
           ))}
         </div>
       </div>
-
       <div className="about-us-button-section">
         <Link to="/about" className="about-us-button">
           About Us

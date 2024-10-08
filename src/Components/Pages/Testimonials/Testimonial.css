@@ -1,20 +1,28 @@
 .testimonial-container {
-  display: flex;
+  position: relative;
+  top: 70px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
   justify-content: space-evenly;
   align-items: center;
-  height: 100vh;
-  padding: 0 50px;
+  height: 100%;
+  padding: 0 320px;
   margin-top: 50px;
+  gap: 100px;
+  margin-bottom: 100px;
+  
 }
 
 .testimonial-card {
-  width: 350px;
+  width: 100%;
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
   text-align: center;
   font-family: Arial, sans-serif;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
 }
 
 .test-heading {
@@ -38,9 +46,10 @@
 }
 
 .testimonial-image {
-  width: 40%;
+  width: 45%;
   border-radius: 50%;
   margin-bottom: 10px;
+  box-shadow: 0px 0px 30px rgba(255, 225, 0, 0.474);
 }
 
 .testimonial-name {

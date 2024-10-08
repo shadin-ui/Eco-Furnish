@@ -27,6 +27,7 @@
 .register-container h2 {
   text-align: center;
   position: relative;
+  font-family: "syne";
   bottom: 55px;
   color: rgb(255, 255, 255);
   font-weight: 600;

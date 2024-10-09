@@ -230,6 +230,12 @@
       "name": "shadins",
       "email": "shadins@gmail.com",
       "password": "shadin"
+    },
+    {
+      "id": "30bc",
+      "name": "Shadin",
+      "email": "shadin10@gmail.com",
+      "password": "Shadin@1234"
     }
   ],
   "categories": [

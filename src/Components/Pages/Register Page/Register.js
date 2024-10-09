@@ -11,10 +11,33 @@ const Register = () => {
   const [confirmPassword, setConfirmPassword] = useState('');
   const navigate = useNavigate();
 
+  const validateEmail = (email) => {
+    // Simple regex to check if the email is valid
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
+
+  const validatePassword = (password) => {
+    // Password must be at least 8 characters long, contain a capital letter, a number, and a special character
+    const passwordRegex = /^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
+    return passwordRegex.test(password);
+  };
+
   const handleRegister = async (e) => {
     e.preventDefault();
+    
+    if (!validateEmail(email)) {
+      alert('Please enter a valid email address (e.g., example@example.com).');
+      return;
+    }
+
     if (password !== confirmPassword) {
       alert("Passwords don't match!");
+      return;
+    }
+
+    if (!validatePassword(password)) {
+      alert('Password must be at least 8 characters long, include a capital letter, a number, and a special character.');
       return;
     }
 
@@ -78,7 +101,7 @@ const Register = () => {
             <label>Confirm Password</label>
             <input
               type="password"
-              placeholder='Password'
+              placeholder='Confirm Password'
               value={confirmPassword}
               onChange={(e) => setConfirmPassword(e.target.value)}
               required
@@ -87,8 +110,8 @@ const Register = () => {
           <button type="submit">Register</button>
         </form>
         <p>
-        Already a member?<Link to="/login">Login</Link>
-      </p>
+          Already a member? <Link to="/login">Login</Link>
+        </p>
       </div>
     </div>
   );

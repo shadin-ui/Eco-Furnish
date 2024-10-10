@@ -229,13 +229,30 @@
       "id": "508e",
       "name": "shadins",
       "email": "shadins@gmail.com",
-      "password": "shadin"
+      "password": "shadin",
+      "isAdmin": false
     },
     {
       "id": "30bc",
       "name": "Shadin",
       "email": "shadin10@gmail.com",
-      "password": "Shadin@1234"
+      "password": "Shadin@1234",
+      "isAdmin": false
+      
+    },
+    {
+      "id": "b437",
+      "name": "Nihal",
+      "email": "nihal@gmail.com",
+      "password": "Nihal@123",
+      "isAdmin": false
+    },
+    {
+      "id": "8a48",
+      "name": "nihal1",
+      "email": "nihal1@gmail.com",
+      "password": "Nihal@1234",
+      "isAdmin": false
     }
   ],
   "categories": [

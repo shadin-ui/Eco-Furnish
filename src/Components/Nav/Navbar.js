@@ -1,18 +1,25 @@
-import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect, useContext } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
 import './Navbar.css';
 import Logo from '../Images/Logos.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartArrowDown, faUserCircle } from '@fortawesome/free-solid-svg-icons';
+import { Loginfn } from '../../App';
 
 const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
-  const handleLogout = () => {
-    setIsLoggedIn(false);
-    alert('Logged out successfully');
-  };
-
+  const {islogin,activeUser}= useContext(Loginfn);
+  console.log('islogin', activeUser);
+  
   const [hidden, setHidden] = useState(false);
   const [lastScrollTop, setLastScrollTop] = useState(0);
+  const navigate = useNavigate()
+
+  const handleLogout = () => {
+    setIsLoggedIn(false);
+    localStorage.removeItem('loggedInUser');
+    alert('Logged out successfully');
+    navigate('/')
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -45,7 +52,7 @@ const Navbar = ({ isLoggedIn, setIsLoggedIn }) => {
         <li><Link to="/testimonial">Testimonial</Link></li>
       </ul>
       <ul className="auth-links">
-        {isLoggedIn && (
+        {activeUser && (
           <li>
             <Link to="/cart" className='cart-icon'>
               <FontAwesomeIcon icon={faCartArrowDown} />

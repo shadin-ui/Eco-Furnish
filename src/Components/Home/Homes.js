@@ -27,12 +27,14 @@ function HomePage({ addToCart, isLoggedIn }) {
   }, []);
 
   const handleAddToCart = (Product) => {
-    if (!isLoggedIn) {
+    if (isLoggedIn) {
       navigate('/login');
       return;
     }
     addToCart(Product);
     setAddedProductIds((prevIds) => [...prevIds, Product.id]);
+    console.log('addedProductIds', addedProductIds);
+    
     setNotification(`Product "${Product.type}" added to cart!`);
     setTimeout(() => {
       setNotification('');

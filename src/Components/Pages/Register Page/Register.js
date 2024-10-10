@@ -9,6 +9,7 @@ const Register = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
+ 
   const navigate = useNavigate();
 
   const validateEmail = (email) => {
@@ -40,8 +41,8 @@ const Register = () => {
       alert('Password must be at least 8 characters long, include a capital letter, a number, and a special character.');
       return;
     }
-
-    const userData = { name, email, password };
+    const isAdmin=false;
+    const userData = { name, email, password,isAdmin};
     try {
       const response = await fetch('http://localhost:5000/userslist', {
         method: 'POST',

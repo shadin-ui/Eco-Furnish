@@ -16,7 +16,7 @@ const Cart = ({ cartItems, removeFromCart }) => {
         <p>No items in your cart yet!</p>
       ) : (
         <>
-          {cartItems.map((item) => (
+          {!cartItems.map((item) => (
             <div key={item.id} className="cart-item">
               <img src={item.image} alt={item.name} className="cart-item-image" />
               <div>
